@@ -1,4 +1,4 @@
-/* Fondo general */
+/* general */
 body {
   font-family: 'Times New Roman', Times, serif;
   background-image: url('https://wallpapercave.com/wp/wp2863920.jpg');
@@ -25,7 +25,7 @@ header h1 {
   font-size: 1.8rem;
 }
 
-/* Navegación */
+/* Navegacion */
 nav {
   margin-top: 15px;
 }
@@ -71,7 +71,7 @@ main {
   align-items: flex-start;
 }
 
-/* Elementos del acordeón */
+/* Elementos del acordeon */
 .accordion-item {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
@@ -86,7 +86,7 @@ main {
   box-shadow: 0 8px 25px rgba(0, 180, 216, 0.3);
 }
 
-/* Header del acordeón */
+/* Header del acordeon */
 .accordion-header {
   display: flex;
   justify-content: space-between;
@@ -111,7 +111,7 @@ main {
   gap: 10px;
 }
 
-/* Icono del acordeón */
+/* Icono del acordeon */
 .accordion-icon {
   font-size: 1.5rem;
   font-weight: bold;
@@ -119,7 +119,7 @@ main {
   transition: transform 0.3s ease;
 }
 
-/* Contenido del acordeón */
+/* Contenido del acordeon */
 .accordion-content {
   max-height: 0;
   overflow: hidden;

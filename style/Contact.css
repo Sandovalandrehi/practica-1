@@ -1,4 +1,4 @@
-/* Fondo general */
+/* general */
 body {
   font-family: 'Times New Roman', Times, serif;
   background-image: url('https://wallpapercave.com/wp/wp2863920.jpg');
@@ -25,7 +25,7 @@ header h1 {
   font-size: 1.8rem;
 }
 
-/* Navegación */
+/* Navegacion */
 nav {
   margin-top: 15px;
 }
@@ -42,7 +42,7 @@ nav a:hover {
   color: #90e0ef;
 }
 
-/* Contenido principal */
+/* principal */
 main {
   max-width: 900px;
   margin: 40px auto;
