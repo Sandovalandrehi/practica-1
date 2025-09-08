@@ -1,9 +1,231 @@
-h1 {
-    font-size: 1.5em; }
+/* Fondo general */
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-image: url('https://wallpapercave.com/wp/wp2863920.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 80px; /* Espacio para el footer */
+  color: #333;
+  line-height: 1.6;
+}
 
-h2 {
-    color: blue; }
-p {
-    font-size: 1.2em; 
-    line-height: 1.5; 
+/* Encabezado */
+header {
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+/* Navegación */
+nav {
+  margin-top: 15px;
+}
+
+nav a {
+  color: whitesmoke;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #90e0ef;
+}
+
+/* Contenido principal */
+main {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* Layout de dos columnas */
+.content-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* Columna izquierda */
+.left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Columna derecha */
+.right-column {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Elementos del acordeón */
+.accordion-item {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.accordion-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 180, 216, 0.3);
+}
+
+/* Header del acordeón */
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  cursor: pointer;
+  background: rgba(0, 180, 216, 0.2);
+  transition: background 0.3s ease;
+}
+
+.accordion-header:hover {
+  background: rgba(0, 180, 216, 0.3);
+}
+
+.accordion-header h2 {
+  margin: 0;
+  color: whitesmoke;
+  font-size: 1.3rem;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Icono del acordeón */
+.accordion-icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: whitesmoke;
+  transition: transform 0.3s ease;
+}
+
+/* Contenido del acordeón */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 20px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.accordion-content.active {
+  max-height: 500px;
+  padding: 20px;
+}
+
+.accordion-content p {
+  font-size: 1.1rem;
+  color: whitesmoke;
+  margin: 0;
+  text-align: justify;
+}
+
+/* Contenedor de imagen */
+.image-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  height: 500px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.image-container:hover {
+  border-color: #00b4d8;
+  box-shadow: 0 8px 25px rgba(0, 180, 216, 0.3);
+  transform: translateY(-5px);
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  display: none;
+}
+
+.image-container.has-image img {
+  display: block;
+}
+
+.image-container.has-image .image-overlay {
+  display: none;
+}
+
+.image-overlay {
+  text-align: center;
+  color: whitesmoke;
+  font-size: 1.1rem;
+  opacity: 0.7;
+}
+
+/* Footer */
+footer {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 -4px 10px rgba(251, 251, 251, 0.2);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: whitesmoke;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  z-index: 100;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .content-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  main {
+    margin: 20px;
+    padding: 15px;
+  }
+  
+  .image-container {
+    height: 300px;
+    max-width: 100%;
+  }
+  
+  nav a {
+    margin: 0 8px;
+    font-size: 0.9rem;
+  }
+  
+  .accordion-header h2 {
+    font-size: 1.1rem;
+  }
 }

@@ -1,69 +1,86 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="mystyle.css">
-    <title>Perfil Personal</title>
-    <style>
-        /* CSS interno */
-        body {
-            background-color: whitesmoke;
-            font-family: 'Times New Roman', Times, serif;
-        }
-        header {
-            background-color:white; 
-            color:black;
-            padding: 10px;
-            text-align: center;
-        }
-        footer {
-            background-color: black; 
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Andrehi Sandoval</title>
+  <link rel="stylesheet" href="style/mystyle.css">
 </head>
 <body>
 
 <header>
-    <h1>Welcome to Andrehi Sandoval's official website.</h1>
-    <p></p>
+  <h1>Welcome to Andrehi Sandoval's official website.</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="Hobbies.html">Hobbies</a>
+    <a href="Contact.html">Contact</a>
+  </nav>
 </header>
 
 <main>
-    <section>
-        <h2>Biography</h2>
-        <p>Hello, my full name is Andrehi Sashil Sandoval Rivera. I'm 22 years old.
-I'm currently studying software engineering and emerging technologies at the Autonomous University of Baja California (UABC)
-Valle de las Palmas Campus (FCITEC).</p>
-    </section>
+  <div class="content-layout">
+    <!-- Columna izquierda - Información desplegable -->
+    <div class="left-column">
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion('biography')">
+          <h2>Biography</h2>
+          <span class="accordion-icon" id="biography-icon">+</span>
+        </div>
+        <div class="accordion-content" id="biography">
+          <p>Hello, my full name is Andrehi Sashil Sandoval Rivera. I'm 22 years old.
+          I'm currently studying software engineering and emerging technologies at the Autonomous University of Baja California (UABC)
+          Valle de las Palmas Campus (FCITEC).</p>
+        </div>
+      </div>
 
-    <section>
-        <h2>Hobbies</h2>
-        <ul>
-            <li>Play soccer</li>
-            <li>Wach movies</li>
-            <li>Drive my car</li>
-        </ul>
-        <div style="text-align: center;">
-        <img src="DSC0612-Medium.jpg" alt="Hobby Image" style="max-width: 20%;">
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion('memory')">
+          <h2>A memory of my life</h2>
+          <span class="accordion-icon" id="memory-icon">+</span>
+        </div>
+        <div class="accordion-content" id="memory">
+          <p>The time that was marked in my life, in 2017 I entered the Xoloitzcuintle initiation center at the end of the year I entered the third division of the under 17, already in 2018 in the middle of the year I went to the second division and at the end of the year I entered the first division, for a while I played in the first division but that fun didn't last long, I don't know what happened to my godfather therefore I couldn't continue playing, because I couldn't pay the expenses alone and I better got into an Atlas league in Rosarito, and in November I had my ankle injury and it is permanent due to some players who wanted to hurt me and they succeeded. But it was good while it lasted, that dream of being a professional player.</p>
+        </div>
+      </div>
     </div>
-    </section>
 
-    <section>
-        <h2>Contact information</h2>
-        <p>Email: <a href="mailto:andrehi.sandoval@uabc.edu.mx">andrehi.sandoval@uabc.edu.mx</a></p>
-    </section>
+    <!-- Columna derecha --> 
+    <div class="right-column">
+      <div class="image-container has-image">
+        <img src="Imagen de WhatsApp 2025-09-05 a las 21.25.43_7aa0759f.jpg" alt="Andrehi Sandoval" id="personal-image">
+        <div class="image-overlay">
+        </div>
+      </div>
+    </div>
+  </div>
 </main>
 
 <footer>
-    <p>&copy; 2025 Andrehi sandoval. all rights are reserved</p>
+  <p>&copy; 2025 Andrehi Sandoval. All rights reserved.</p>
 </footer>
+
+<script>
+function toggleAccordion(id) {
+  const content = document.getElementById(id);
+  const icon = document.getElementById(id + '-icon');
+  
+  if (content.classList.contains('active')) {
+    content.classList.remove('active');
+    icon.textContent = '+';
+  } else {
+    // Cerrar otros acordeones
+    const allContents = document.querySelectorAll('.accordion-content');
+    const allIcons = document.querySelectorAll('.accordion-icon');
+    
+    allContents.forEach(item => item.classList.remove('active'));
+    allIcons.forEach(icon => icon.textContent = '+');
+    
+    // Abrir solo el seleccionado
+    content.classList.add('active');
+    icon.textContent = '−';
+  }
+}
+</script>
 
 </body>
 </html>

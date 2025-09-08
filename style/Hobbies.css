@@ -1,0 +1,158 @@
+/* Fondo general */
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-image: url('https://wallpapercave.com/wp/wp2863920.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 70px; /* Espacio para el footer fijo */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+/* Navegación */
+nav {
+  margin-top: 15px;
+}
+
+nav a {
+  color: whitesmoke;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #90e0ef;
+}
+
+/* Contenido principal */
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(251, 251, 251, 0.2);
+}
+
+/* Secciones */
+h2 {
+  color: whitesmoke;
+  border-bottom: 2px solid #00b4d8;
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.1rem;
+  color: whitesmoke;
+  margin: 8px 0;
+}
+
+/* Lista de hobbies */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: rgba(255, 255, 255, 0.1);
+  margin: 15px 0;
+  padding: 15px;
+  border-radius: 8px;
+  color: whitesmoke;
+  font-size: 1.1rem;
+  backdrop-filter: blur(5px);
+  border-left: 4px solid #00b4d8;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+li:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(0, 180, 216, 0.3);
+}
+
+/* Contenedor de audio */
+section {
+  margin: 20px 0;
+  text-align: center;
+}
+
+audio {
+  width: 100%;
+  max-width: 400px;
+  margin: 10px 0;
+  border-radius: 8px;
+}
+
+/* Contenedor de imagen */
+.image-container {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.image-container img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Footer */
+footer {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 -4px 10px rgba(251, 251, 251, 0.2);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: whitesmoke;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  z-index: 100;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  main {
+    margin: 20px;
+    padding: 15px;
+  }
+  
+  .image-container img {
+    max-width: 80%;
+  }
+  
+  nav a {
+    margin: 0 8px;
+    font-size: 0.9rem;
+  }
+}

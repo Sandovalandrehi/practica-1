@@ -1,0 +1,180 @@
+/* Fondo general */
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-image: url('https://wallpapercave.com/wp/wp2863920.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 70px; /* Espacio para el footer fijo */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+/* Navegación */
+nav {
+  margin-top: 15px;
+}
+
+nav a {
+  color: whitesmoke;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #90e0ef;
+}
+
+/* Contenido principal */
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(251, 251, 251, 0.2);
+}
+
+/* Secciones */
+
+h2 {
+  color: whitesmoke;
+  border-bottom: 2px solid #00b4d8;
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+}
+
+/* Parrafos de contacto */
+p {
+  font-size: 1.2rem;
+  color: whitesmoke;
+  margin: 20px 0;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  border-left: 4px solid #00b4d8;
+  backdrop-filter: blur(5px);
+}
+
+/* Enlaces de contacto */
+a {
+  color: #90e0ef;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+a:hover {
+  color: #00b4d8;
+  text-shadow: 0 0 5px rgba(144, 224, 239, 0.5);
+}
+
+/* Enlace de email */
+a[href^="mailto:"] {
+  background: rgba(0, 180, 216, 0.2);
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+a[href^="mailto:"]:hover {
+  background: rgba(0, 180, 216, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Enlace de WhatsApp e*/
+a[href^="https://wa.me"] {
+  color: #25D366 !important;
+  background: rgba(37, 211, 102, 0.2);
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+a[href^="https://wa.me"]:hover {
+  background: rgba(37, 211, 102, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+/* Imagen de WhatsApp */
+a img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+a:hover img {
+  transform: rotate(10deg) scale(1.1);
+}
+
+/* informacion de contacto */
+.contact-info {
+  display: grid;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Footer */
+footer {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 -4px 10px rgba(251, 251, 251, 0.2);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: whitesmoke;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  z-index: 100;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  main {
+    margin: 20px;
+    padding: 20px;
+  }
+  
+  nav a {
+    margin: 0 8px;
+    font-size: 0.9rem;
+  }
+  
+  p {
+    font-size: 1.1rem;
+  }
+  
+  a[href^="https://wa.me"] {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+}
